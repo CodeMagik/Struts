@@ -19,8 +19,10 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>  {
         //else return "ERROR";
     }
 	
-	@Override
 	public User getModel() {
+		// TODO Auto-generated method stub
 		return user;
 	}
+	
+	
 }
