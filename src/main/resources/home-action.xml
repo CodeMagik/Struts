@@ -32,6 +32,9 @@
     	<action name="home">
         	<result>/home/home.jsp</result>
     	</action>
+    	<action name="brand">
+        	<result>/home/home.jsp</result>
+    	</action>
     	<action name="signup">
         	<result>/home/signup.jsp</result>
     	</action>
