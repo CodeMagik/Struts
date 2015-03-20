@@ -30,12 +30,23 @@
         
     <package name="user" namespace="/User" extends="struts-default">
     	<action name="home">
+        	<result>/home/home.jsp</result>
+    	</action>
+    	<action name="signup">
+        	<result>/home/signup.jsp</result>
+    	</action>
+    	<action name="login">
         	<result>/home/login.jsp</result>
     	</action>
-    	<action name="login" class="com.mycompany.mysystem.home.LoginAction">
-    		<result name="SUCCESS">/home/home.jsp</result>
-    		<result name="ERROR">/error/error.jsp</result>
+    	<action name="loginUser" class="com.mycompany.mysystem.home.LoginAction">
+    		<result name="success">/home/done.jsp</result>
+    		<result name="error">/home/login.jsp</result>
     		<result name ="input">/home/login.jsp</result>  
+    	</action>
+    	<action name="signupUser" class="com.mycompany.mysystem.home.SignUpAction">
+    		<result name="success">/home/done.jsp</result>
+    		<result name="error">/home/signup.jsp</result>
+    		<result name ="input">/home/signup.jsp</result>  
     	</action>
 	</package>
 </struts>

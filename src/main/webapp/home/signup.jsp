@@ -56,7 +56,7 @@
 		        </li>
 		      </ul>
 			  	<ul class="nav navbar-nav navbar-right">
-			          <li>
+			           <li>
 			        		<s:url action="login.action" var="aLogin" />
 			        		<s:a href="%{aLogin}">Log in</s:a>
 			        </li>
@@ -77,24 +77,37 @@
             <s:actionmessage theme="bootstrap"/>
             <s:fielderror theme="bootstrap"/>
   	                 
- <s:form id="loginform" action="loginUser" theme="bootstrap" cssClass="form-horizontal" label="Login">
+ <s:form id="signupform" action="signupUser" theme="bootstrap" cssClass="form-horizontal" label="Sign up">
   <fieldset>
     <div class="form-group">
       <div class="col-lg-10">
-      <s:textfield label="Email" cssClass="form-control" name="name"/>
+      <s:textfield label="Email" cssClass="form-control"/>
       </div>
     </div>
     <div class="form-group">
     
       <div class="col-lg-10">
-        <s:password label="Password" cssClass="form-control" name="pwd"/>
+        <s:password label="Password" cssClass="form-control" />
         
       </div>
     </div>
-     <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
+      <div class="form-group">
+     
+      <div class="col-lg-10">
+       <s:textfield label="Phone" cssClass="form-control"/>
         
-        <s:submit cssClass="btn btn-primary" value="Login"/>
+      </div>
+    </div>
+    <div class="form-group">
+    	<div class="col-lg-10">
+   		<s:radio label="Gender" list="{'Male', 'Female'}" name="Gender" />
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <s:reset  cssClass="btn btn-default" value="Cancel"/>
+        <s:submit cssClass="btn btn-primary" value="Submit"/>
       </div>
     </div>
   </fieldset>
