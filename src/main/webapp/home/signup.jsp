@@ -26,7 +26,7 @@
     
   </head>
   <body>
-  	<div class="navbar navbar-default">
+ <div class="navbar navbar-default">
   		<div class="container">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -35,8 +35,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		     
-		      			<s:url action="brand.action" var="aBrand" />
+		     <s:url action="brand.action" var="aBrand" />
 			        	<s:a href="%{aBrand}" cssClass="navbar-brand">Brand</s:a>
 		    </div>
 
@@ -58,7 +57,7 @@
 		        </li>
 		      </ul>
 			  	<ul class="nav navbar-nav navbar-right">
-			        <li>
+			           <li>
 			        		<s:url action="login.action" var="aLogin" />
 			        		<s:a href="%{aLogin}">Log in</s:a>
 			        </li>
@@ -72,28 +71,49 @@
   		</div>
 	
 	
-    </div>	
-	
+    </div>
+    
 <div class="container">
-  <div class="form-wrapper" style="text-align:center; vertical-align:middle">
-                    
- <form class="form-inline" role="form">
- 				<div class = "form-group">
-        			<div class="input-group">
-        			 	<span class="input-group-addon">Chennai</span>
-        			 	<input class="form-control input-lg" type="text" id="inputLarge1" placeholder="Location">
-                	</div>
-                    </div>
-			        <div class = "form-group">
-        				<div class="input-group">
-               		 		<input class="form-control input-lg" type="text" id="inputLarge2" placeholder="Speciality">
-                			<span class="input-group-btn">
-                			<button class="btn btn-primary btn-lg" type="submit" title="">Search</button>
-                			</span>
-              </div>
-              </div>
-    </form>
-</div>
+ <s:actionerror theme="bootstrap"/>
+            <s:actionmessage theme="bootstrap"/>
+            <s:fielderror theme="bootstrap"/>
+  	                 
+ <s:form id="signupform" action="signupUser" theme="bootstrap" cssClass="form-horizontal" label="Sign up">
+  <fieldset>
+    <div class="form-group">
+      <div class="col-lg-10">
+      <s:textfield label="Email" cssClass="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+    
+      <div class="col-lg-10">
+        <s:password label="Password" cssClass="form-control" />
+        
+      </div>
+    </div>
+      <div class="form-group">
+     
+      <div class="col-lg-10">
+       <s:textfield label="Phone" cssClass="form-control"/>
+        
+      </div>
+    </div>
+    <div class="form-group">
+    	<div class="col-lg-10">
+   		<s:radio label="Gender" list="{'Male', 'Female'}" name="Gender" />
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <s:reset  cssClass="btn btn-default" value="Cancel"/>
+        <s:submit cssClass="btn btn-primary" value="Submit"/>
+      </div>
+    </div>
+  </fieldset>
+</s:form>
+
 </div>
 
 

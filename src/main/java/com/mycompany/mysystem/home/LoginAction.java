@@ -14,13 +14,18 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>  {
 	private static final long serialVersionUID = 1L;
 	@Override
     public String execute() throws Exception {
-        //if("pankaj".equals(getName()) && "admin".equals(getPwd()))
-        return "SUCCESS";
-        //else return "ERROR";
+        if("admin".equals(user.getName()) && "admin".equals(user.getPwd())){
+        return SUCCESS;
+        }
+        else{
+        	return ERROR;
+        }
     }
 	
-	@Override
 	public User getModel() {
+		// TODO Auto-generated method stub
 		return user;
 	}
+	
+	
 }
