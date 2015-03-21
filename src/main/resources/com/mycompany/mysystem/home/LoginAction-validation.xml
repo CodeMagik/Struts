@@ -5,13 +5,13 @@
 <validators>
   <field name="name">
     <field-validator type="requiredstring">
-      <message key="requiredstring"/>
+      <message key="name.requiredstring"/>
     </field-validator>
   </field>
   
   <field name="pwd">
     <field-validator type="requiredstring">
-      <message key="requiredstring"/>
+      <message key="pwd.requiredstring"/>
     </field-validator>
   </field>
 </validators>

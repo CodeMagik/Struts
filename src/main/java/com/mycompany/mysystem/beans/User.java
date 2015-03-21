@@ -2,7 +2,6 @@ package com.mycompany.mysystem.beans;
 
 public class User {
 
-	private String userId;
 	private String name;
 	private String pwd;
 	public String getPwd() {
@@ -17,12 +16,5 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
 	
 }
